@@ -49,11 +49,17 @@ app.get('/app', (req, res) =>{
     }
 });
 
-mongoose.connect('mongodb://localhost:27017/blog');
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/project2'
+mongoose.connect(mongoUri);
+
 mongoose.connection.once('open', ()=>{
 	console.log('connected to mongo');
 });
 
-app.listen(3000, ()=>{
-	console.log('listening....');
+const port = process.env.PORT || 3000
+
+app.listen(port, ()=>{
+	console.log('---------------------------------');
+console.log('Server running on port: ' + port);
+console.log('---------------------------------');
 });
