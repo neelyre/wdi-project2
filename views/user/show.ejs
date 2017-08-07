@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet"  href="/style.css">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1>Show Page for <%=user.name%></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/user">User Index</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<h2>User Attributes:</h2>
+				<ul>
+					<li>Name: <%=user.name%></li>
+				</ul>
+			</section>
+			<section>
+    <h2>Uploads from this User:</h2>
+    <ul>
+        <% for(let i = 0; i < user.uploads.length; i++){ %>
+            <li><a href="/uploads/<%=user.uploads[i]._id%>"><%=user.uploads[i].title%></a></li>
+        <% } %>
+    </ul>
+</section>
+      <section>
+    <a href="/user/<%=user._id%>/edit">Edit</a>
+     </section>
+      <section>
+    <form action="/user/<%=user._id%>?_method=DELETE" method="post">
+        <input type="submit" value="Delete User"/>
+    </form>
+</section>
+
+		</main>
+	</body>
+</html>

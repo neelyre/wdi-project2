@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet"  href="/style.css">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1><%=Upload.title%></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/uploads">Uploads Index</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h1><%=upload.title%></h1>
+			<small>by: <a href="/users/<%=user._id%>"><%=user.name%></a></small>
+			<section>
+				<img src = "<%=Upload.url;%>"><br>
+			</section>
+			<section>
+				<p><%=Upload.description%></p>
+      <section>
+    <a href="/uploads/<%=Upload._id%>/edit">Edit</a>
+</section>
+      <section>
+    <form action="/uploads/<%=Upload._id%>?_method=DELETE" method="post">
+        <input type="submit" value="Delete Upload"/>
+    </form>
+</section>
+		</main>
+	</body>
+</html>
