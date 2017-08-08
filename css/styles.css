@@ -8,7 +8,7 @@ body {
 
 }
 
-h1, h3 {
+h1, h2, h3 {
   text-align: center;
   color: #BB2700;
 }
@@ -21,6 +21,29 @@ ul{
 li {
     display: inline-block;
     margin: 0 auto;
-    padding: 10px;
-    background-color: #F652F6
+    padding: 8px;
+    background-color: #00e699;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+li:hover {
+  scale(1.5);
+      transition: all 200ms ease-in;
+      transform: scale(1.1);
+      background-color: gray;
+
+}
+
+a:hover {
+  transition: all 200ms ease-in;
+  color: yellow;
+}
+
+#registration {
+  margin: 0 auto;
+}
+
+#edit_button {
+  padding: 8px;
 }

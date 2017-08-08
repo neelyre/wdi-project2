@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet"  href="/style.css">
+<link rel="stylesheet"  href="/styles.css">
 		<title></title>
 	</head>
 	<body>
@@ -11,19 +11,21 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="/">Home</a>
+						<a href="/">Back to homepage</a>
 					</li>
 					<li>
-						<a href="/user">Users Index</a>
+						<a href="/user">List of current Tailgaters</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 		<main>
-			<form action="/user" method="POST">
-				<input type="text" name="name" /><br>
-        <input type="submit" value="Create User"/>
+			<div id="registration"><form action="/user" method="POST">
+				<input type="text" name="name" value="name" required=true/><br>
+				<input type="text" name="school" value="favorite school"/><br>
+        <input type="submit" value="Create New Tailgater"/>
 			</form>
+			<div>
 		</main>
 	</body>
 

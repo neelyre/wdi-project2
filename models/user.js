@@ -3,6 +3,7 @@ const Upload = require('../models/uploads.js');
 
 const userSchema = mongoose.Schema({
   name: String,
+  school: String,
 	uploads: [Upload.schema]
 });
 
