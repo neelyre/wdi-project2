@@ -21,18 +21,17 @@
 			</nav>
 		</header>
 		<main>
-			<form action="/uploads" method="post">
-				<select name="userId">
-        <% for(let i = 0; i < users.length; i++) { %>
-            <option value="<%=users[i]._id%>"><%=users[i].name%></option>
-        <% } %>
-    </select><br/>
-
-				Name<input type="text" name="title" /><br/>
-				img<input type="text" name="url" value="image url link" /><br/>
-				Description<input type="text" name="description" /><br/>
-				<input type="submit" value="Publish Upload"/>
-			</form>
-		</main>
+					<form action="/uploads" method="post">
+						<select name="userId">
+			 <% for(let i = 0; i < users.length; i++) { %>
+					 <option value="<%=users[i]._id%>"><%=users[i].name%></option>
+			 <% } %>
+	 </select><br/>
+						Name<input type="text" name="title" /><br/>
+						img<input type="text" name="url" value="image url link" /><br/>
+						Description<input type="text" name="description" /><br/>
+						<input type="submit" value="Publish Upload"/>
+					</form>
+				</main>
 	</body>
 </html>

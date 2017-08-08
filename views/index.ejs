@@ -1,32 +1,29 @@
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-			<h1>
-	<% if(currentUser) { %>
-			Welcome <%=currentUser.username%>!
-	<% } else { %>
-			Welcome!
-	<% } %>
-</h1>
-        <nav>
-            <ul>
-						<% if(currentUser) { %>
-						    <li>
-						        <form action="/sessions?_method=DELETE" method="POST">
-						            <input type="submit" value="Logout"/>
-						        </form>
-						    </li>
-						<% } %>
-            </ul>
-        </nav>
-				<% if(currentUser) { %>
-    <main>
-            Welcome to the <a href="/app">party</a>
-    </main>
-<% } %>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet"  href="/styles.css">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1>Welcome to Tales of the Tailgate</h1>
+			<h3>Here you can create a user account and share you favorite college fotoball tailgating experiences. You can even upload images!</h3>
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation"><a href="/user">Users</a>
+					</li>
+					<li role="presentation">
+						<a href="/uploads">Uploads</a>
+					</li>
+				</ul>
+				<div class="pics">
+				<img src="http://i.imgur.com/gTmj3Cf.jpg"  style="width:300px; height:300px;">
+				<img src="http://i.imgur.com/D3uhVDG.jpg" style="width:300px; height:300px;">
+				<img src="http://i.imgur.com/qoiVN06.jpg"style="width:300px; height:300px;">
+			</div>
+			</nav>
+		</header>
+	</body>
 </html>

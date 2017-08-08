@@ -21,7 +21,7 @@ router.get('/new', (req, res)=>{
 
 router.post('/', (req, res)=>{
 	User.create(req.body, (err, createdUser)=>{
-		res.redirect('/');
+		res.redirect('/user');
 	});
 });
 
@@ -48,29 +48,22 @@ router.put('/:id', (req, res)=>{
 });
 
 router.delete('/:id', (req, res)=>{
-  User.findByIdAndRemove(req.params.id, ()=>{
-    const UploadsIds = [];
-    for (let i = 0; i < foundUser.uploads.length; i++) {
-      UploadsIds.push(foundUser.uploads[i]._id);
-    }
-    Upload.remove(
-      {
-        _id : {
-          $in: uploadIds
-        }
-      },
-      (err, data)=>{
-        res.redirect('/user');
-      }
-    );
-  });
-});
-
-router.post('/', function(req, res){
-    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
-    User.create(req.body, function(err, createdUser){
-        res.redirect('/');
-    });
+	User.findByIdAndRemove(req.params.id, (err, foundUser)=>{
+		const uploadIds = [];
+		for (let i = 0; i < foundUser.uploads.length; i++) {
+			articleIds.push(foundUser.uploads[i]._id);
+		}
+		Upload.remove(
+			{
+				_id : {
+					$in: uploadIds
+				}
+			},
+			(err, data)=>{
+				res.redirect('/users');
+			}
+		);
+	});
 });
 
 module.exports = router;

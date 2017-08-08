@@ -8,7 +8,8 @@
 	</head>
 	<body>
 		<header>
-			<h1><%=Upload.title%></h1>
+			<h1><%=upload.title%></h1>
+			<small>by: <a href="/user/<%=user._id%>"><%=user.name%></a></small>
 			<nav>
 				<ul>
 					<li>
@@ -21,20 +22,22 @@
 			</nav>
 		</header>
 		<main>
-			<h1><%=upload.title%></h1>
-			<small>by: <a href="/users/<%=user._id%>"><%=user.name%></a></small>
 			<section>
-				<img src = "<%=Upload.url;%>"><br>
+				<h1><%=upload.body%></h1>
+      </section>
+			<section>
+				<img src = "<%=upload.url;%>" width:><br>
 			</section>
 			<section>
-				<p><%=Upload.description%></p>
-      <section>
-    <a href="/uploads/<%=Upload._id%>/edit">Edit</a>
-</section>
-      <section>
-    <form action="/uploads/<%=Upload._id%>?_method=DELETE" method="post">
+				<p><%=upload.description%></p>
+
+	<section>
+    <form action="/uploads/<%=upload._id%>?_method=DELETE" method="post">
         <input type="submit" value="Delete Upload"/>
     </form>
+</section>
+<section>
+<a href="/uploads/<%=upload._id%>/edit">Edit</a>
 </section>
 		</main>
 	</body>

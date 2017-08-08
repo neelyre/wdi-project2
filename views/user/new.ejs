@@ -8,7 +8,6 @@
 	</head>
 	<body>
 		<header>
-			<h1>Create User</h1>
 			<nav>
 				<ul>
 					<li>
@@ -21,12 +20,9 @@
 			</nav>
 		</header>
 		<main>
-			<h1>Create User</h1>
-        <form action="/users" method="POST">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" />
-            <input type="submit" value="Create User" />
-        </form>
+			<form action="/user" method="POST">
+				<input type="text" name="name" /><br>
+        <input type="submit" value="Create User"/>
 			</form>
 		</main>
 	</body>

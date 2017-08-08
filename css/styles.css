@@ -1,0 +1,26 @@
+body {
+  /*background-color: red;*/
+  background: #957306;
+  background: linear-gradient(to bottom right, #957306, #00B9BB);
+  font-family: 'Permanent Marker', cursive;
+  height: 900px;
+
+
+}
+
+h1, h3 {
+  text-align: center;
+  color: #BB2700;
+}
+
+
+ul{
+  text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #F652F6
+}

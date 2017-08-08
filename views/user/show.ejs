@@ -29,11 +29,11 @@
 			</section>
 			<section>
     <h2>Uploads from this User:</h2>
-    <ul>
-        <% for(let i = 0; i < user.uploads.length; i++){ %>
-            <li><a href="/uploads/<%=user.uploads[i]._id%>"><%=user.uploads[i].title%></a></li>
-        <% } %>
-    </ul>
+		<ul>
+			<% for(let i = 0; i < user.uploads.length; i++){ %>
+					<li><a href="/uploads/<%=user.uploads[i]._id%>"><%=user.uploads[i].title%></a></li>
+			<% } %>
+	</ul>
 </section>
       <section>
     <a href="/user/<%=user._id%>/edit">Edit</a>
