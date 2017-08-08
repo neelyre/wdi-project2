@@ -8,6 +8,11 @@ body {
 
 }
 
+.pics{
+    margin: 0 auto;
+    display: inline-block;
+}
+
 h1, h2, h3 {
   text-align: center;
   color: #BB2700;
@@ -21,10 +26,10 @@ ul{
 li {
     display: inline-block;
     margin: 0 auto;
-    padding: 8px;
+    padding: 3px;
     background-color: #00e699;
     border-radius: 10px;
-    border-width: 3px;
+    border-width: 1px;
 }
 
 li:hover {
@@ -40,9 +45,6 @@ a:hover {
   color: yellow;
 }
 
-#registration {
-  margin: 0 auto;
-}
 
 #edit_button {
   padding: 5px;
