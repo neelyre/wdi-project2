@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user.js');
 const Upload = require('../models/uploads.js');
-const bcrypt = require('bcrypt');
+
 
 
 
@@ -48,21 +48,8 @@ router.put('/:id', (req, res)=>{
 });
 
 router.delete('/:id', (req, res)=>{
-	User.findByIdAndRemove(req.params.id, (err, foundUser)=>{
-		const uploadIds = [];
-		for (let i = 0; i < foundUser.uploads.length; i++) {
-			articleIds.push(foundUser.uploads[i]._id);
-		}
-		Upload.remove(
-			{
-				_id : {
-					$in: uploadIds
-				}
-			},
-			(err, data)=>{
-				res.redirect('/users');
-			}
-		);
+	User.findByIdAndRemove(req.params.id, ()=>{
+		res.redirect('/user');
 	});
 });
 

@@ -45,5 +45,10 @@ a:hover {
 }
 
 #edit_button {
-  padding: 8px;
+  padding: 5px;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: yellow;
+  border-radius: 15px;
+  border-width: 2px;
 }

@@ -25,20 +25,26 @@
 			<section>
 				<h2>Tailgater Qualities:</h2>
 				<ul>
+					<img src = "<%=user.url;%>" style="width:75px; height:75px;"><br>
 					<li>Name: <%=user.name%></li></br>
 					<li>School: <%=user.school%></li>
+
 				</ul>
 			</section>
 			<section>
     <h2>Uploads from this Tailgater:</h2>
 		<ul>
 			<% for(let i = 0; i < user.uploads.length; i++){ %>
+				  <img src = "<%=user.uploads[i].url%>" style="width:125px; height:100px;"></br>
 					<li><a href="/uploads/<%=user.uploads[i]._id%>"><%=user.uploads[i].title%></a></li>
 			<% } %>
 	</ul>
 </section>
-      <section>
-    <a id="edit_button" href="/user/<%=user._id%>/edit">Edit</a>
+      <li>
+				<a href="/uploads/new">Publish a new Tailgating Experience</a>
+      </li>
+			<section>
+    <a id="edit_button" href="/user/<%=user._id%>/edit">Edit User Info</a>
      </section>
       <section>
     <form action="/user/<%=user._id%>?_method=DELETE" method="post">
