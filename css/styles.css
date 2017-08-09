@@ -2,7 +2,7 @@ body {
   /*background-color: red;*/
   background: #957306;
   background: linear-gradient(to bottom right, #957306, #00B9BB);
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Cabin', sans-serif;
   height: 900px;
 
 
@@ -21,30 +21,38 @@ h1, h2, h3, h4{
 
 ul{
   text-align: center;
+
 }
 
 li {
     display: inline-block;
     margin: 5px;
-    padding: 3px;
-    background-color: #00e699;
-    border-radius: 10px;
+    padding: 2px;
+    background-color: #00cc44;
+    border-radius: 5px;
     border-width: 1px;
 }
 
 li:hover {
-  scale(1.5);
+  scale(1);
       transition: all 200ms ease-in;
-      transform: scale(1.1);
-      background-color: gray;
+      /*transform: scale(1.1);*/
+      /*background-color: #00802b;*/
 
 }
 
-a:hover {
+/*a:hover {
   transition: all 200ms ease-in;
   color: yellow;
-}
+}*/
 
+small {
+  margin: 5px;
+  padding: 2px;
+  background-color: #00cc44;
+  border-radius: 5px;
+  border-width: 1px;
+}
 
 #edit_button {
   padding: 5px;
@@ -61,5 +69,21 @@ a:hover {
 
 .footerbuttons {
   display: block;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.grille {
+  display: block;
+  margin: 0 auto;
+}
+
+.chiefsphoto{
+  display: block;
+  margin: 0 auto;
+
+}
+
+.showimage {
+  display: block;
+  margin: 0 auto;
 }

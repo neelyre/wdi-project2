@@ -8,25 +8,25 @@
 	</head>
 	<body>
 		<header>
-			<h1><%=upload.title%></h1>
-			<small>by: <a href="/user/<%=user._id%>"><%=user.name%></a></small>
+			<small>uploaded by: <a href="/user/<%=user._id%>"><%=user.name%></a></small>
 			<nav>
 				<ul>
 					<li>
 						<a href="/">Back to HomePage</a>
 					</li>
 					<li>
-						<a href="/uploads">Tailgating Expereinces</a>
+						<a href="/uploads">Tailgating Experiences</a>
 					</li>
 				</ul>
 			</nav>
+				<h1><%=upload.title%></h1>
 		</header>
 		<main>
 			<section>
 				<h1><%=upload.body%></h1>
       </section>
 			<section>
-				<img src = "<%=upload.url;%>" width:><br>
+				<img class="showimage" src = "<%=upload.url;%>"><br>
 			</section>
 			<section>
 				<p><%=upload.description%></p>

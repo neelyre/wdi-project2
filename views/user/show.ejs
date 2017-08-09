@@ -42,15 +42,17 @@
 </section>
 <div class="footerbuttons">
 <section>
+	<ul class="nav nav-tabs">
       <li>
-				<a href="/uploads/new">Publish a new Tailgating Experience</a>
+				<a role="presentation" href="/uploads/new">Publish a new Tailgating Experience</a>
       </li>
-			<section>
-    <a id="edit_button" href="/user/<%=user._id%>/edit">Edit User Info</a>
-     </section>
-      <section>
+		<li>
+    <a role="presentation" href="/user/<%=user._id%>/edit">Edit User Info</a>
+    </li>
+      <li>
     <form action="/user/<%=user._id%>?_method=DELETE" method="post">
-        <input type="submit" value="Delete User"/>
+        <input type="submit" role="presentation" value="Delete User"/>
+				</li>
     </form>
 </section>
 </div>
