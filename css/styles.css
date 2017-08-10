@@ -87,3 +87,13 @@ small {
   display: block;
   margin: 0 auto;
 }
+
+.form-group{
+  width: 600px;
+  margin: 0 auto;
+}
+
+.ftimage {
+
+  margin: 0 auto;
+}

@@ -7,11 +7,15 @@ const Upload = require('../models/uploads.js');
 
 
 router.get('/', (req, res)=>{
+  if(req.session.logged){
   User.find({}, (err, foundUsers)=>{
 	   res.render('user/index.ejs', {
       users: foundUsers
 		});
 	})
+} else {
+    res.redirect('/sessions/login')
+  }
 });
 
 

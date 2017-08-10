@@ -10,28 +10,43 @@
 		<header>
 			<h1>Create an Upload</h1>
 			<nav>
-				<ul class="nav nav-pills">
-					<li role="presentation">
+				<ul>
+					<li>
 						<a href="/">Home</a>
 					</li>
-					<li role="presentation">
+					<li>
 						<a href="/uploads">Uploads Index</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 		<main>
-					<form action="/uploads" method="post">
-						<select name="userId">
-			 <% for(let i = 0; i < users.length; i++) { %>
-					 <option value="<%=users[i]._id%>"><%=users[i].name%></option>
-			 <% } %>
-	 </select><br/>
-						Name<input type="text" name="title" /><br/>
-						img<input type="text" name="url" placeholder="image url link" /><br/>
-						Description<input type="text" name="description" /><br/>
+			<img class='grille' src="https://static1.squarespace.com/static/51b74359e4b0f643c17dc67b/t/522e9beae4b06bf96fa3590d/1378786283137/The+Art+of+Tailgating.jpg?format=500w"style="width:300px; height:250px;">
+			<div class="container">
+
+									<form action="/uploads" method="post">
+										<select name="userId">
+							 <% for(let i = 0; i < users.length; i++) { %>
+									 <option value="<%=users[i]._id%>"><%=users[i].name%></option>
+							 <% } %>
+					 </select><br/>
+
+	 				<div class="form-group">
+		 			<label for="exmapleName">Title of your Experience</label>
+						<input type="text" name="title" class="form-control" placeholder="title" required=true/><br>
+					</div><br>
+
+					<div class="form-group">
+					<label for="exmapleSchool">Post a Photo!</label>
+						<input type="text" name="url" class="form-control" placeholder="image url link" /><br/>
+						</div><br>
+
+					<div class="form-group">
+					<label for="exampleTextarea">Description</label>
+						<textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Enter you story here." ></textarea><br>
 						<input type="submit" value="Publish Experience"/>
 					</form>
+				</div>
 				</main>
 	</body>
 </html>
