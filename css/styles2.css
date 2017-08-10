@@ -1,0 +1,126 @@
+body {
+  font-family: 'Chewy', cursive;
+  font-size: 18px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+
+}
+.navbutton {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #b3c6ff;
+  color: black;
+
+}
+
+.navbutton:hover {
+  background-color: #8cd98c;
+  scale(1);
+      transition: all 200ms ease-in;
+      text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  background-color: #00cc44;
+  /*background-image: url("turf_header.png");*/
+}
+
+.header-1 {
+  display: flex;
+  flex-wrap: wrap;
+  /*width: 70%;*/
+  justify-content: center;
+}
+
+.subheader {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
+}
+
+.container-2 {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #e6b3b3;
+  justify-content: center;
+}
+
+.box-1 {
+  display: flex;
+  padding: 15px;
+}
+
+.image-box-1 {
+  margin: 0 auto;
+}
+
+.box-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.image-box-2 {
+  margin: 0 auto;
+}
+
+.container-3 {
+  height: 400px;
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #c6ecd9;
+}
+
+.box-3 {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.box-4 {
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.image-box-3 {
+  margin: 0 auto;
+}
+
+.box-5{
+    display: flex;
+    justify-content: center;
+}
+
+.grille{
+  display: flex;
+  justify-content: center;
+}
+
+.container-5 {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #7094db;
+  justify-content: center;
+}
+
+.box-6 {
+  width: 80%;
+}
+
+.new_t_button{
+  display: flex;
+  justify-content: center;
+}
