@@ -24,7 +24,7 @@
 
 				<h2>About<br><%=user.name%></h2><br>
 					<div clas="box-5">
-					<img src = "<%=user.url;%>" style="width:100px; height:100px;"><br>
+					<img src = "<%=user.url;%>" onerror="this.src='/images/defaultimg.png';" style="width:100px; height:100px;"><br>
 					<li>Name: <%=user.name%></li></br>
 					<li>School: <%=user.school%></li>
        </div>
@@ -36,7 +36,7 @@
 		 <div class="box-7">
 
 			<% for(let i = 0; i < user.uploads.length; i++){ %>
-				  <div class="event"><img src = "<%=user.uploads[i].url%>" style="width:125px; height:100px;"></br>
+				  <div class="event"><img src = "<%=user.uploads[i].url%>"  style="width:125px; height:100px;"></br>
 					<a href="/uploads/<%=user.uploads[i]._id%>"><%=user.uploads[i].title%></a>
 					</div>
 			<% } %>

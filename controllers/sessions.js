@@ -46,14 +46,14 @@ router.post('/login', (req, res, next) => {
             } else {
               console.log('else in bcrypt compare')
               req.session.message = 'Username or password are incorrect';
-              res.redirect('/login')
+              res.redirect('/sessions/login')
 
             }
 
       } else {
 
           req.session.message = 'Username or password are incorrect';
-          res.redirect('/login')
+          res.redirect('/sessions/login')
 
       } //end of if user
   });
