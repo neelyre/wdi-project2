@@ -22,22 +22,23 @@
 		<main>
 			<div class="container-2">
 
-				<h2>About <%=user.name%></h2><br>
+				<h2>About<br><%=user.name%></h2><br>
 					<div clas="box-5">
-				<ul>
 					<img src = "<%=user.url;%>" style="width:100px; height:100px;"><br>
 					<li>Name: <%=user.name%></li></br>
 					<li>School: <%=user.school%></li>
        </div>
 		 </div>
-		 <div class="container-2">
-
+		 <div class="container-4">
+     <div class="t-adventures">
     <h2><%=user.name%>'s Tailgating Adventures:</h2>
-		 <div clas="box-5">
-		<ul>
+	</div>
+		 <div class="box-7">
+
 			<% for(let i = 0; i < user.uploads.length; i++){ %>
-				  <img src = "<%=user.uploads[i].url%>" style="width:125px; height:100px;"></br>
-					<li><a href="/uploads/<%=user.uploads[i]._id%>"><%=user.uploads[i].title%></a></li>
+				  <div class="event"><img src = "<%=user.uploads[i].url%>" style="width:125px; height:100px;"></br>
+					<a href="/uploads/<%=user.uploads[i]._id%>"><%=user.uploads[i].title%></a>
+					</div>
 			<% } %>
 		</div>
   </div>

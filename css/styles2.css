@@ -1,6 +1,7 @@
 body {
   font-family: 'Chewy', cursive;
   font-size: 18px;
+  background-image: url("/images/turf_header2.png")
 }
 
 .flex-container {
@@ -98,6 +99,12 @@ body {
   margin: 0 auto;
 }
 
+.container-4{
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #e6b3b3;
+  justify-content: center;
+}
 .box-5{
     display: flex;
     justify-content: center;
@@ -128,4 +135,46 @@ body {
 .ftimage{
   display: flex;
   justify-content: center;
+}
+
+.navbutton2 {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #b3c6ff;
+  color: black;
+
+}
+
+.showimage {
+  padding: 10px;
+}
+
+.uploads_header {
+  display: flex;
+  justify-content: center;
+}
+
+.t-adventures{
+  display: flex;
+  justify-content: center;
+}
+
+.box-7{
+  display: flex;
+  justify-content: center;
+
+}
+
+.box-8 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.event {
+  display: block;
+  text-align: center;
+  padding: 10px;
 }

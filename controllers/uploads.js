@@ -29,10 +29,13 @@ router.get('/new', (req, res)=>{
 
 
 router.post('/', (req, res)=>{
+	console.log('logging the body');
+	console.log(req.body);
     User.findById(req.body.userId, (err, foundUser)=>{
         Upload.create(req.body, (err, createdUpload)=>{ //req.body.userId is ignored due to Schema
             foundUser.uploads.push(createdUpload);
             foundUser.save((err, data)=>{
+							console.log(createdUpload);
                 res.redirect('/uploads');
             });
         });
@@ -66,6 +69,7 @@ router.delete('/:id', (req, res)=>{
 
 router.get('/:id/edit', (req, res)=>{
 	Upload.findById(req.params.id, (err, foundUpload)=>{
+		console.log(foundUpload);
 		res.render('uploads/edit.ejs', {
 			upload: foundUpload
 		});

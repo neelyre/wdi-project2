@@ -20,16 +20,19 @@
 					</div>
 				</div>
     <main>
-			<div class="container-2">
-				<div clas="box-5">
-	<h2>List of <u></u>Tailgating Expereinces</h2>
-	<ul>
+			<div class="container-4">
+			     <div class="t-adventures">
+	<h2>List of Tailgating Expereinces</h2>
+</div>
+		<div class="box-8">
 		<% for(let i = 0; i < Uploads.length; i++){ %>
-			<li>
+			<div class="event"><img src = "/uploads/<%=Uploads[i].url%>" style="width:125px; height:100px;"></br>
+
 				<a href="/uploads/<%=Uploads[i]._id%>"><%=Uploads[i].title%></a>
-			</li>
+			</div>
 		<% } %>
-	</ul>
+	</div>
+
 </main>
 	</body>
 </html>
